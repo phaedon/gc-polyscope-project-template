@@ -1,0 +1,2 @@
+bazel_dep(name = "geometry-central", version = "1.0.0")
+bazel_dep(name = "polyscope", version = "2.4.0-20250430")

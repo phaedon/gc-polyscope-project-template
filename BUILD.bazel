@@ -1,0 +1,18 @@
+filegroup(
+    name = "assets",
+    srcs = glob(["*.*"]),
+)
+
+# Example:
+# bazel run :example -- fox.ply
+cc_binary(
+    name = "example",
+    srcs = ["src/main.cpp"],
+    data = [
+        ":assets",
+    ],
+    deps = [
+        "@geometry-central//:surface",
+        "@polyscope",
+    ],
+)
